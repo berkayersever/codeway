@@ -2,10 +2,10 @@
   "name": "codeway",
   "version": "0.0.1",
   "private": true,
-  "main": "./bin/www.js",
+  "main": "./bin/www",
   "scripts": {
-    "start": "nodemon --exec ./node_modules/.bin/babel-node ./bin/www.js",
-    "server": "node ./bin/www.js"
+    "start": "nodemon --exec ./node_modules/.bin/babel-node ./bin/www",
+    "server": "node ./bin/www"
   },
   "dependencies": {
     "@google-cloud/bigquery": "^5.5.0",
