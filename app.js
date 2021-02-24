@@ -1,20 +1,20 @@
-import express from 'express';
-import createError from 'http-errors';
-import path from 'path';
-import cookieParser from 'cookie-parser';
-import logger from 'morgan';
+// import express from 'express';
+// import createError from 'http-errors';
+// import path from 'path';
+// import cookieParser from 'cookie-parser';
+// import logger from 'morgan';
 
-import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
+// import indexRouter from './routes/index.js';
+// import usersRouter from './routes/users.js';
 
-// const createError = require('http-errors');
-// const express = require('express');
-// const path = require('path');
-// const cookieParser = require('cookie-parser');
-// const logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-// const indexRouter = require('./routes/index');
-// const usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 
 const app = express();
 // const __dirname = path.dirname(new URL(import.meta.url).pathname);
