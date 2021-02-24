@@ -17,8 +17,8 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const app = express();
-// const __dirname = path.dirname(new URL(import.meta.url).pathname);
-const __dirname = (() => {let x = path.dirname(decodeURI(new URL(import.meta.url).pathname)); return path.resolve( (process.platform === "win32") ? x.substr(1) : x ); })();
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+// const __dirname = (() => {let x = path.dirname(decodeURI(new URL(import.meta.url).pathname)); return path.resolve( (process.platform === "win32") ? x.substr(1) : x ); })();
 // console.log(__dirname);
 
 // view engine setup
