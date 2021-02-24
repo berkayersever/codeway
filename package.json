@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "main": "./bin/www.js",
-  "type": "module",
   "scripts": {
     "start": "nodemon --exec ./node_modules/.bin/babel-node ./bin/www.js",
     "server": "node ./bin/www.js"
