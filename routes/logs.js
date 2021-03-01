@@ -19,6 +19,7 @@ const path = require('path');
 });*/
 
 router.get('/', (req, res, next) => {
+    const fs = require("fs");
     let logs = JSON.parse(fs.readFileSync(path.resolve(__dirname, path.join('..', 'public', 'events', 'dummyEvents.json')), 'utf-8'));
     res.render('logs', { title: 'Logs', event_list: logs });
 });
