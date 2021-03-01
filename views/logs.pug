@@ -1,11 +1,11 @@
 extends layout
 
 mixin event_element(e)
-a(href= './produits/' + e.id title='En savoir plus...')
-    h2= e.name
-    img(alt='event' src='./assets/img/'+ e.image)
-    p.price= e.price
-        small Prix
+    a(href= './produits/' + e.id title='En savoir plus...')
+        h2= e.name
+        img(alt='event' src='./assets/img/' + e.image)
+        p.price= e.price
+            small Prix
 
 #events-list.logs
     each e in event_list
