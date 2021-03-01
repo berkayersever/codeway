@@ -19,8 +19,8 @@ const path = require('path');
 });*/
 
 router.get('/', (req, res, next) => {
-    let data = JSON.parse(fs.readFileSync(path.resolve(__dirname, path.join('..', 'public', 'events', 'dummyEvents.json')), 'utf-8'));
-    res.render('logs', { title: 'Logs', events: data });
+    let logs = JSON.parse(fs.readFileSync(path.resolve(__dirname, path.join('..', 'public', 'events', 'dummyEvents.json')), 'utf-8'));
+    res.render('logs', { title: 'Logs', event_list: logs });
 });
 
 module.exports = router;
