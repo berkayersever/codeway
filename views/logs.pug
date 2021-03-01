@@ -1,13 +1,35 @@
 extends layout
 
-mixin event_element(e)
-    a(href= './produits/' + e.id title='En savoir plus...')
-        h2= e.name
-        img(alt='event' src='./assets/img/' + e.image)
-        p.price= e.price
-            small Prix
+mixin tableRow(e)
+    tr
+        td #{e.type}
+        td #{e.app_id}
+        td #{e.session_id}
+        td #{e.event_name}
+        td #{e.event_time}
+        td #{e.page}
+        td #{e.country}
+        td #{e.region}
+        td #{e.city}
+        td #{e.user_id}
 
 block content
-    #events-list.logs
-        each e in event_list
-            +event_element(e)
+    table.ui.celled.table.center.aligned
+        thead
+            tr
+                th type
+                th app_id
+                th session_id
+                th event_name
+                th event_time
+                th page
+                th country
+                th region
+                th city
+                th user_id
+        tbody
+            each e in event_list
+                +tableRow(e)
+        tfoot
+            tr
+                th(colspan='10')
