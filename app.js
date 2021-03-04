@@ -16,6 +16,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const logsRouter = require('./routes/logs');
 const usersRouter = require('./routes/users');
+const publishRouter = require('./routes/publish');
 
 const app = express();
 // const __dirname = path.dirname(new URL(import.meta.url).pathname);
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/logs', logsRouter);
 app.use('/users', usersRouter);
+app.use('/publishBatchedMessages', publishRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
