@@ -23,7 +23,7 @@ const jsonParser = bodyParser.json()
 router.post('/batchedMessages', jsonParser, (req, res, next) => {
     // console.log(`Request:\t ${JSON.stringify(req, getCircularReplacer())}`);
     publisher.publishBatchedMessages(req.body).then(response => {
-        console.log(response);
+        response && console.log(`Response:\t ${response}`);
     }).catch(next);
     /*console.log(`Request Body:\t ${JSON.stringify(req.body, getCircularReplacer())}`);
     publisher.publishBatchedMessages(req.body).then(response => {
