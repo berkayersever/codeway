@@ -20,13 +20,11 @@ const jsonParser = bodyParser.json()
 };*/
 
 /* GET logs page. */
-router.post('/batchedMessages', jsonParser, (req, res) => {
+router.post('/batchedMessages', jsonParser, (req, res, next) => {
     // console.log(`Request:\t ${JSON.stringify(req, getCircularReplacer())}`);
     publisher.publishBatchedMessages(req.body).then(response => {
         console.log(response);
-    }).catch(err => {
-        console.error(`Received error: ${err.message}`);
-    });
+    }).catch(next);
     /*console.log(`Request Body:\t ${JSON.stringify(req.body, getCircularReplacer())}`);
     publisher.publishBatchedMessages(req.body).then(response => {
         console.log(response);
