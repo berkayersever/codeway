@@ -17,6 +17,7 @@ const indexRouter = require('./routes/index');
 const logsRouter = require('./routes/logs');
 const usersRouter = require('./routes/users');
 const publishRouter = require('./routes/publish');
+const queryRouter = require('./routes/query');
 
 const app = express();
 // const __dirname = path.dirname(new URL(import.meta.url).pathname);
@@ -40,6 +41,7 @@ app.use('/', indexRouter);
 app.use('/logs', logsRouter);
 app.use('/users', usersRouter);
 app.use('/publish', publishRouter);
+app.use('/query', queryRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
