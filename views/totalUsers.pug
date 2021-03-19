@@ -1,0 +1,22 @@
+extends layout
+
+mixin tableRow(e)
+    tr
+        td #{e.total_users}
+
+block content
+    body
+        main#main
+        h1.ui.center.aligned.header Total Users
+        .ui.container
+            block content
+                table.ui.celled.table.center.aligned
+                    thead
+                        tr
+                            th Total Users
+                    tbody
+                        each e in event_list
+                            +tableRow(e)
+                    tfoot
+                        tr
+                            th(colspan='1')
