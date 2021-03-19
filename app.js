@@ -1,12 +1,3 @@
-// import express from 'express';
-// import createError from 'http-errors';
-// import path from 'path';
-// import cookieParser from 'cookie-parser';
-// import logger from 'morgan';
-
-// import indexRouter from './routes/index.js';
-// import usersRouter from './routes/users.js';
-
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -21,15 +12,9 @@ const queryRouter = require('./routes/query');
 const viewRouter = require('./routes/view');
 
 const app = express();
-// const __dirname = path.dirname(new URL(import.meta.url).pathname);
-// const __dirname = (() => {let x = path.dirname(decodeURI(new URL(import.meta.url).pathname)); return path.resolve( (process.platform === "win32") ? x.substr(1) : x ); })();
-// console.log(__dirname);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-// app.set('views', './views');
-// console.log(path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
@@ -62,4 +47,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-// export default app;
