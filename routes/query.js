@@ -1,9 +1,6 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
 const router = express.Router();
 const bigQuery = require('../lib/source/bigQueryService');
-
-// const jsonParser = bodyParser.json()
 
 /* GET Daily Active Users */
 router.get('/dailyActiveUsers', (req, res, next) => {
