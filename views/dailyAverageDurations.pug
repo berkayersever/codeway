@@ -1,0 +1,28 @@
+extends layout
+
+mixin tableRow(e)
+    tr
+        td #{e.event_date.value}
+        td #{e.average_seconds}
+        td #{e.average_minutes}
+        td #{e.average_hours}
+
+block content
+    body
+        main#main
+        h1.ui.center.aligned.header Daily Average Durations
+        .ui.container
+            block content
+                table.ui.celled.table.center.aligned
+                    thead
+                        tr
+                            th Date
+                            th Average Seconds
+                            th Average Minutes
+                            th Average Hours
+                    tbody
+                        each e in event_list
+                            +tableRow(e)
+                    tfoot
+                        tr
+                            th(colspan='4')
